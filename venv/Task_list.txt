@@ -1,0 +1,7 @@
+[x] stworzyć plansze
+[x] stworzyć kwadrat gracza
+[ ] utworzyć możliwość ruchu gracza w pionie
+[ ] sprawic by nie ruszali się co 10 tylko płynnie
+[ ] stworzyć kwadrat przeciwnika
+[ ] stworzyć strzały przeciwnika lecące poziomo
+[ ] stworzyć kalse figure i różne typy przeciwnikow
