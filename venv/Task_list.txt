@@ -4,15 +4,19 @@
 [x] sprawic by nie ruszali się co 10 tylko płynnie
 [x] stworzyć kwadrat przeciwnika
 [x] stworzyć strzały przeciwnika lecące poziomo
-[ ] wielu przeciwników - przeciwnicy pojawiają się wraz z upływającym czasem
-[ ] wiele pocisków
-[ ] randomizacja pozycji przeciwników z pozostawieniem pocisków w pierwotnej linii
-[ ] kolizja z pociskiem
+[x] wielu przeciwników - przeciwnicy pojawiają się wraz z upływającym czasem
+[x] wiele pocisków
+[x] randomizacja pozycji przeciwników z pozostawieniem pocisków w pierwotnej linii
+[x] kolizja z pociskiem
 [ ] granice ruchu
-[ ] usuwanie wykrozystanych nabojów
+[ ] usuwanie wykorzystanych nabojów
 [ ] stworzyć kalse figure i różne typy przeciwnikow
+[ ] randomizacja pozycji wszystkich przeciwników poza ostatnim, co 5 pojawiających się
+[ ] zróżnicowanie czasu pojawiania się pocisków (do tej pory wszystkich y jest identyczne)
+[ ] wyświetlenie napisu o przegranej w oknie aplikacji
 
 Opcjonalne:
 [ ] Utworzenie osobnej klasy bullet
 [ ] Utworzenie czasu który udało się przeżyć i wpisanie go na listę wyników w plik txt (na liste top 5, kasując wyniki które z niej wypadają)
 [ ] dodać plik dźwiękowy uruchamiany w tle
+[ ] kiedy drugi przeciwnik pojawi się w tym samym miejscu co pierwszy, to szybkość ich pocisków wzrasta dwukrotnie

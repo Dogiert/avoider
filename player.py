@@ -15,3 +15,11 @@ class Player(board_objects.Square_object):
             self.position_y += self.speed * self.speed_multiplier * delta_time
         elif direction_of_movement == pygame.K_UP:
             self.position_y -= self.speed * self.speed_multiplier * delta_time
+
+    def collison_with_bullet(self, bullet_x, bullet_y, bullet_side_dimension):
+        for i in range(bullet_x, bullet_x + bullet_side_dimension):
+            for j in range(bullet_y, bullet_y + bullet_side_dimension):
+                if self.position_x <= i < self.position_x + self.side_dimension and self.position_y <= j < self.position_y + self.side_dimension:
+                    print('Przegrałeś')
+                    return True
+        return False

@@ -1,7 +1,10 @@
+import random
+
 import pygame
 from display_draw import Display
 import player
 import enemy
+from enemy import Enemy
 
 pygame.init()
 
@@ -11,6 +14,9 @@ board_height = 600
 clock = pygame.time.Clock()
 enemy_list = []
 enemy_counter = 0
+time_zero = pygame.time.get_ticks()
+last_enemy_time = 0
+last_bullet_time = 0
 
 if __name__ == '__main__':
     direction_of_movement = 0
@@ -25,7 +31,7 @@ if __name__ == '__main__':
         enemy_list.append(enemy.Enemy())
     else:
         while len(enemy_list) != enemy_counter:
-            enemy_list.append(enemy.Enemy())
+                enemy_list.append(enemy.Enemy.add_new_enemy())
 
     while not game_over:
         surface.fill(pygame.color.THECOLORS['azure2'])
@@ -38,10 +44,26 @@ if __name__ == '__main__':
                     direction_of_movement = event.key
 
         player_square.draw_player(surface)
-        enemy_list[0].draw_enemy(surface)
+        current_time = round((pygame.time.get_ticks() - time_zero)  / 1000)
+        for enemy in enemy_list:
+            enemy.draw_enemy(surface)
+            enemy.draw_bullet(surface, delta_time)
         player_square.player_move(delta_time, direction_of_movement)
-        enemy_list[0].draw_bullet(surface, delta_time)
         pygame.display.update()
-        # clock.tick(30)
+
+        if current_time - last_bullet_time >= 2:
+            for enemy in enemy_list:
+                enemy.add_bullet()
+            last_bullet_time = current_time
+            if current_time - last_enemy_time >= 5:
+                enemy_list.append(Enemy.add_new_enemy())
+                for enemy in enemy_list:
+                    enemy.add_bullet()
+                last_enemy_time = current_time
+        for enemy in enemy_list:
+            for bullet in enemy.bullet_positions:
+                if player_square.collison_with_bullet(int(bullet[0]), int(bullet[1]), 10):
+                    game_over = True
+                    print(f'Przeżyłeś milisekund: {round(time_zero)}')
     pygame.quit()
     quit()
