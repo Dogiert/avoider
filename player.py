@@ -6,8 +6,8 @@ class Player(board_objects.Square_object):
         super().__init__(side_dimension, position_x, position_y)
         self.player_color = pygame.color.THECOLORS[player_color]
         self.speed = 100
-        self.speed_multiplier = 8
-    def create_player_square(self, surface):
+        self.speed_multiplier = 2
+    def draw_player(self, surface):
         pygame.draw.rect(surface, self.player_color, (self.position_x, self.position_y, self.side_dimension, self.side_dimension))
 
     def player_move(self, delta_time, direction_of_movement):

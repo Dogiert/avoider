@@ -9,6 +9,4 @@ class Display:
     def draw_board(self):
         board = pygame.display.set_mode((self.width, self.height))
         board.fill(pygame.color.THECOLORS['azure2'])
-        pygame.display.update()
         return board
-    
