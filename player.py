@@ -10,11 +10,17 @@ class Player(board_objects.Square_object):
     def draw_player(self, surface):
         pygame.draw.rect(surface, self.player_color, (self.position_x, self.position_y, self.side_dimension, self.side_dimension))
 
-    def player_move(self, delta_time, direction_of_movement):
+    def player_move(self, delta_time, direction_of_movement, board_height):
         if direction_of_movement == pygame.K_DOWN:
-            self.position_y += self.speed * self.speed_multiplier * delta_time
+            if self.position_y <= board_height - self.side_dimension:
+                self.position_y += self.speed * self.speed_multiplier * delta_time
+            else:
+                pass
         elif direction_of_movement == pygame.K_UP:
-            self.position_y -= self.speed * self.speed_multiplier * delta_time
+            if self.position_y >= 0 + self.side_dimension:
+                self.position_y -= self.speed * self.speed_multiplier * delta_time
+            else:
+                pass
 
     def collison_with_bullet(self, bullet_x, bullet_y, bullet_side_dimension):
         for i in range(bullet_x, bullet_x + bullet_side_dimension):
@@ -23,3 +29,4 @@ class Player(board_objects.Square_object):
                     print('Przegrałeś')
                     return True
         return False
+

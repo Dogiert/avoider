@@ -8,9 +8,9 @@
 [x] wiele pocisków
 [x] randomizacja pozycji przeciwników z pozostawieniem pocisków w pierwotnej linii
 [x] kolizja z pociskiem
-[ ] granice ruchu
-[ ] usuwanie wykorzystanych nabojów
-[ ] stworzyć kalse figure i różne typy przeciwnikow
+[x] granice ruchu
+[x] usuwanie wykorzystanych nabojów
+[-] stworzyć klase figure i różne typy przeciwnikow
 [ ] randomizacja pozycji wszystkich przeciwników poza ostatnim, co 5 pojawiających się
 [ ] zróżnicowanie czasu pojawiania się pocisków (do tej pory wszystkich y jest identyczne)
 [ ] wyświetlenie napisu o przegranej w oknie aplikacji
