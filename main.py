@@ -67,7 +67,7 @@ if __name__ == '__main__':
                     game_over = True
                     print(f'Przeżyłeś milisekund: {round(time_zero)}')
         if len(enemy_list) % 3 == 0:
-            for enemy in enemy_list:
+            for enemy in enemy_list[:-1]:
                 enemy.position_y = random.randrange(0,board_height-10, 10)
     pygame.quit()
     quit()

@@ -11,7 +11,7 @@
 [x] granice ruchu
 [x] usuwanie wykorzystanych nabojów
 [-] stworzyć klase figure i różne typy przeciwnikow
-[ ] randomizacja pozycji wszystkich przeciwników poza ostatnim, co 5 pojawiających się
+[x] randomizacja pozycji wszystkich przeciwników poza ostatnim, co 3 pojawiających się
 [ ] zróżnicowanie czasu pojawiania się pocisków (do tej pory wszystkich y jest identyczne)
 [ ] wyświetlenie napisu o przegranej w oknie aplikacji
 
